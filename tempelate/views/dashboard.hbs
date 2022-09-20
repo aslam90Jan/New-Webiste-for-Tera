@@ -1,0 +1,196 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Welcome ! {{user}} Our Profile Dashboard </title>
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="scss/css/style.css" />
+</head>
+
+<body>
+    <!-- *************************************** start wesbite ***************************************** -->
+    <!-- *************************************** start header ***************************************** -->
+    {{>header}}
+    <!-- *************************************** end header ***************************************** -->
+    <div class="dashboard-container">
+        <div class="container">
+            <h1>comming soon ! .. this is dashboard </h1>
+            <div class="row">
+                <div class="user-Dashboard">
+                    {{!-- ********************************** Dshboard content are started .. ****************** --}}
+                    <div class="first-row">
+                        <div class="sidebar">
+                            <div class="user-pic">
+                                <img src="{{image}}" alt="user profile image ">
+                            </div>
+                            <div class="user-data">
+                                <div class="user_name userData_items">
+                                    <div class="user_text">
+                                        <h3>{{user}}</h3>
+                                    </div>
+                                    <div class="user_edit">
+                                        <h3><i class="fa fa-edit"></i></h3>
+                                    </div>
+                                </div>
+                                <div class="user_email userData_items">
+                                    <div class="user_text">
+                                        <h3>{{Email}}</h3>
+                                    </div>
+                                    <div class="user_edit">
+                                        <h3><i class="fa fa-edit"></i></h3>
+                                    </div>
+                                </div>
+                                <div class="user_nic userData_items">
+                                    <div class="user_text">
+                                        <h3>{{Phone}}</h3>
+                                    </div>
+                                    <div class="user_edit">
+                                        <h3><i class="fa fa-edit"></i></h3>
+                                    </div>
+                                </div>
+                                <div class="user_phone userData_items">
+                                    <div class="user_text">
+                                        <h3>{{Cnic}}</h3>
+                                    </div>
+                                    <div class="user_edit">
+                                        <h3><i class="fa fa-edit"></i></h3>
+                                    </div>
+                                </div>
+                                <div class="visit_counts userData_items">
+                                    <div class="user_text">
+                                        <h3>User Data </h3>
+                                    </div>
+                                    <div class="user_edit">
+                                        <h3><i class="fa fa-edit"></i></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-user">
+                            <div class="row_full father this-row">
+                                <div class="user_text">
+                                    <h3>Father </h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{Userfathername}}</h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_radios this-row">
+                                <div class="user_text">
+                                    <h3>On Job</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{OnJobOrNot}}</h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_selects this-row">
+                                <div class="user_text">
+                                    <h3>Relation</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{MartialStatus}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful parmanent_address this-row">
+                                <div class="user_text">
+                                    <h3>Country</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{Country}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful postal_address this-row">
+                                <div class="user_text">
+                                    <h3>Provience</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{Provience}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful postal_address this-row">
+                                <div class="user_text">
+                                    <h3>District </h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{district}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful postal_address this-row">
+                                <div class="user_text">
+                                    <h3>Postal A</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{PostalAddress}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful postal_address this-row">
+                                <div class="user_text">
+                                    <h3>Permanent A</h3>
+                                </div>
+                                <div class="user_text">
+                                    <h3>{{PermanentAddress}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                            <div class="row_ful postal_address this-row">
+                                       <div class="user_text">
+                                    <h3>Pass Hint</h3>
+                                </div>
+                                 <div class="user_text">
+                                    <h3>{{passwordHint}} </h3>
+                                </div>
+                                <div class="user_edit">
+                                    <h3><i class="fa fa-edit"></i></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="midum-row"></div>
+                    <div class="last-row"></div>
+                    {{!-- ********************************** Dshboard content are end .. ****************** --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ************************************  7 ) start  footer section *************************************** -->
+    {{>footer}}
+    <!-- ************************************end  footer section *************************************** -->
+    <!-- **********************************   end of Work  ********************************************* -->
+    <script src="scss/js/bootstrap/bootstrap.js"></script>
+    <script src="scss/js/bootstrap/bootstrap.min.js"></script>
+    <script src="scss/js/typed/typedjs.js"></script>
+    <script src="scss/js/fontawsome/all.js"></script>
+    <script src="scss/js/script.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

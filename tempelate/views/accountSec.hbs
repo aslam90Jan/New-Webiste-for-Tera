@@ -1,0 +1,384 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - Create New Account Here ||- tera.com</title>
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="scss/css/style.css" />
+</head>
+
+<body>
+    <!-- *************************************** start wesbite ***************************************** -->
+    <!-- *************************************** start header ***************************************** -->
+    {{>header}}
+    <!-- *************************************** end header ***************************************** -->
+    <div class="signup-Container m-auto">
+        <div class="container">
+            <div class="row flex-col">
+                <h2>Signup form</h2>
+                <form action="/signUp" method="post" enctype="multipart/form-data">
+                    <div class="form-container-signup ful-flex flex-col">
+                        {{!-- first row --}}
+                        <div class="Names input-lg f-row">
+                            <div class="firstname input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end fir-div">
+                                    <span><i class="fa fa-user"></i></span>
+                                    <input type="text" name="Userfirstname" id="userFName" placeholder="First name"
+                                        class="inputClicks" required >
+                                </div>
+                            </div>
+                            <div class="lastname input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end lst-div">
+                                    <span><i class="fa fa-user"></i></span>
+                                    <input type="text" name="Userlastname" id="userLName" placeholder="Last name"
+                                        class="inputClicks" required >
+                                </div>
+                            </div>
+                            <div class="fathername input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end fth-div">
+                                    <span><i class="fa fa-user"></i></span>
+                                    <input type="text" name="Userfathername" id="UserFathName"
+                                        placeholder="Father name (optional)" required  class="inputClicks">
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- second row --}}
+                        <div class="digitalAccounts input-lg s-row">
+                            <div class="email input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end eml-div">
+                                    <span><i class="fa fa-key"></i></span>
+                                    <input type="text" name="Email" id="UserEmail" placeholder="Your Email Address"
+                                        class="inputClicks" required >
+                                </div>
+                            </div>
+                            <div class="Phone input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end phn-div">
+                                    <span><i class="fa fa-phone"></i></span>
+                                    <input type="text" name="Phone" id="UserPhone" placeholder="Your Phone Num"
+                                        class="inputClicks" required >
+                                </div>
+                            </div>
+                            <div class="CNIC input-inner">
+                                <span class="moveSpanStyling">.f</span>
+                                <div class="input-end nic-div">
+                                    <span><i class="fa fa-phone"></i></span>
+                                    <input type="text" name="Cnic" id="UserCnic" placeholder="Your CNIC"
+                                        class="inputClicks" maxlength="16" required >
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- third row --}}
+                        <div class="radiosOptinos input-lg t-row">
+                            <div class="gender input-inner">
+                                <span>Gender</span>
+                                <div class="input-end">
+                                    <div class="for-male mlfml">
+                                        <label for="genderMale">Male</label>
+                                        <input required type="radio" name="gender" id="genderMale" value="Male">
+                                    </div>
+                                    <div class="for-female mlfml">
+                                        <label for="genderfeMale">Female</label>
+                                        <inpu requiredt type="radio" name="gender" id="genderfeMale" value="Female">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="MartialStatus input-inner">
+                                <span>Martial Status</span>
+                                <div class="input-end">
+                                    <div class="for-single mlfml">
+                                        <label for="single">Single</label>
+                                        <input required type="radio" name="MartialStatus" id="single" value="Single">
+                                    </div>
+                                    <div class="Married mlfml">
+                                        <label for="Married">Married</label>
+                                        <input required type="radio" name="MartialStatus" id="married" value="Married">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="OnJob input-inner">
+                                <span>Are you on the Job</span>
+                                <div class="input-end">
+                                    <div class="for-yes-job mlfml">
+                                        <label for="yes-job">Yes</label>
+                                        <input required type="radio" name="OnJobOrNot" id="yes-job" value="Yes">
+                                    </div>
+                                    <div class="for-no-job mlfml">
+                                        <label for="no-job">No</label>
+                                        <input required type="radio" name="OnJobOrNot" id="no-job" value="No">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- fourth Row --}}
+                        <div class="uplodition-files input-lg f-row">
+                            <div class="uploadImagePersonal input-inner ful-flex flex-col">
+                                <span class="uploadSpan">Upload Your Image</span>
+                                <div class="ImagePreview">
+                                    <img alt="" class="imgForPrew" id="UserImagePreview">
+                                </div>
+                                <div class="img-upload input-end">
+                                    <input type="file" name="ProfileImg" id="imageInputUser" class="imgInp" required >
+                                </div>
+                            </div>
+                            {{!-- <div class="uploadImageCNIC input-inner ful-flex flex-col">
+                                <span class="uploadSpan">Upload Your CNIC FrontSide pic</span>
+                                <div class="ImagePreview">
+                                    <img alt="" class="imgForPrew" id="userNicPrew">
+                                </div>
+                                <div class="img-upload input-end">
+                                    <input type="file" name="PersonalCnicImg" id="PersonLCnicInput" class="imgInp">
+                                </div>
+                            </div>
+                            <div class="uploadImageFatherNic input-inner ful-flex flex-col">
+                                <span class="uploadSpan">Upload your Father CNIC FrontSide pic</span>
+                                <div class="ImagePreview">
+                                    <img alt="" class="imgForPrew" id="UserFatherNicPrew">
+                                </div>
+                                <div class="img-upload input-end">
+                                    <input type="file" name="FatherCnicImg" id="FatherCnicInput" class="imgInp">
+                                </div>
+                            </div> --}}
+                        </div>
+                        {{!-- fifth row --}}
+                        <div class="addresses input-lg ft-row">
+                            <div class="Select_Country input-inner">
+                                <span>Select Your Country</span>
+                                <div class="selection input-end">
+                                    <select name="Country" id="countrySelectin" required >
+                                        <option selected disabled>Select Your country</option>
+                                        <option value="Pakistan">Pakistan</option>
+                                        <option value="Afghanistan">Afghanistan</option>
+                                        <option value="India">India</option>
+                                        <option value="America">America</option>
+                                        <option value="China">China</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Select_Provience input-inner" >
+                                <span>Select Your Proivence</span>
+                                <div class="selection input-end">
+                                    <select name="Provience" id="Provinces" required >
+                                        <option selected disabled>Select Your Provience</option>
+                                        <option value="Khyber Pokhtuna">Khyber Pokhtuna</option>
+                                        <option value="Sindh">Sindh</option>
+                                        <option value="Baloch">Baloch</option>
+                                        <option value="Gilgath Balgistan">Gilgath Balgistan</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Select_districtcity input-inner">
+                                <span>Select Your City | District</span>
+                                <div class="selection input-end">
+                                    <select name="district" id="districtCitySelection" required >
+                                        <option selected disabled>Select Your District</option>
+                                        <option value="Khyber">Khyber</option>
+                                        <option value="Peshawar">Peshawar</option>
+                                        <option value="Abbotabad">Abbotabad</option>
+                                        <option value="Swat">Swat</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        {{!-- sixth row --}}
+                        <div class="addresses_local input-lg sx-row">
+                            <div class="input-end">
+                                <textarea name="PermanentAddress" id="Address" cols="30" rows="7"
+                                    placeholder="Parmanent Address" required ></textarea>
+                            </div>
+                        </div>
+                        {{!-- seventh row --}}
+                        <div class="addresses_local input-lg sx-row">
+                            <div class="input-end">
+                                <textarea name="PostalAddress" id="PostAddress" cols="30" rows="7"
+                                    placeholder="Enter Your Postal Address Address" required ></textarea>
+                            </div>
+                        </div>
+                        {{!-- Eight Row --}}
+                        <div class="Passwords input-lg f-row">
+                            <div class="firstPassword input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end">
+                                    <span><i class="fa fa-key"></i></span>
+                                    <input type="password" name="password" id="userpass" placeholder="Password"
+                                        class="inputClicks passInp" required >
+                                    <span id="visible" class=" pointer show"><i class="fa fa-eye"></i></span>
+                                    <span id="hidden" class="hiden pointer hide"><i class="fa fa-close"></i></span>
+                                </div>
+                            </div>
+                            <div class="confirmPass input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end">
+                                    <span><i class="fa fa-key"></i></span>
+                                    <input type="password" name="confirmPassword" id="confirmpas"
+                                        placeholder="confirm Password" class="inputClicks passInp" required >
+                                    <span id="visibleC" class=" pointer show"><i class="fa fa-eye"></i></span>
+                                    <span id="hiddenC" class="hiden pointer hide"><i class="fa fa-close"></i></span>
+                                </div>
+                            </div>
+                            <div class="Password-hint input-inner">
+                                <span class="moveSpanStyling">.</span>
+                                <div class="input-end">
+                                    <span><i class="fa fa-help"></i></span>
+                                    <input type="text" name="passwordHint" id="passHint"
+                                        placeholder="Password Hint (optional)" class="inputClicks" required >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="submitFormBtn">
+                        <input type="submit" class="btn btn-success" value="Submit">
+                        <input type="reset" class="btn btn-danger" value="Reset">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="a m-auto">
+        <a href="/account">Already have an account Login</a>
+    </div>
+    <!-- ************************************  7 ) start  footer section *************************************** -->
+    {{>footer}}
+    <!-- ************************************end  footer section *************************************** -->
+    <!-- **********************************   end of Work  ********************************************* -->
+    <script src="scss/js/bootstrap/bootstrap.js"></script>
+    <script src="scss/js/bootstrap/bootstrap.min.js"></script>
+    <script src="scss/js/typed/typedjs.js"></script>
+    <script src="scss/js/fontawsome/all.js"></script>
+    <script src="scss/js/script.js"></script>
+    <script>
+        "use strict"
+        // ******************** for image preview for this form   **************************
+        const ImagePreview = () => {
+            const imgInput = document.querySelectorAll(".imgInp")
+            const imgPrew = document.querySelectorAll(".imgForPrew");
+            imgInput.forEach((element, index) => {
+                imgInput[index].addEventListener("change", e => {
+                    console.log(e.target)
+                    if (e.target.files.length == 0) return;
+                    let imgPath = URL.createObjectURL(e.target.files[0]);
+                    imgPrew[index].setAttribute("src", imgPath)
+                })
+            })
+        }
+
+        ImagePreview();
+        //********************* this funciton is for click on input span is move *****************
+        const inputSpanStyling = () => {
+            const inputClick = document.querySelectorAll(".inputClicks");
+            inputClick.forEach((element, index) => {
+                const moveSpan = document.querySelectorAll(".moveSpanStyling");
+                inputClick[index].addEventListener("keypress", e => {
+                    moveSpan[index].innerHTML = inputClick[index].placeholder;
+                })
+            })
+        }
+
+        inputSpanStyling();
+        //********************* this funciton is for This form full Validition  *****************
+        const formValidition = () => {
+            const firstName = document.getElementById("userFName");
+            const lastName = document.getElementById("userLName");
+            const fatherName = document.getElementById("UserFathName");
+            const emailAddress = document.getElementById("UserEmail");
+            const userPhone = document.getElementById("UserPhone");
+            const userNic = document.getElementById("UserCnic");
+            const usrPassword = document.getElementById("userpass");
+            const userConfirmPass = document.getElementById("confirmpas");
+            const passHint = document.getElementById("passHint");
+
+            let inputEnd = document.querySelectorAll(".input-end");
+            firstName.addEventListener("keypress", e => {
+                const regax = /^[a-zA-z][^ ]{2,12}$/
+                if (regax.exec(firstName.value)) {
+                    document.querySelector(".fir-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".fir-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+            lastName.addEventListener("keypress", e => {
+                const regax = /^[a-zA-z][^ ]{2,12}$/
+                if (regax.exec(lastName.value)) {
+                    document.querySelector(".lst-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".lst-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+
+            fatherName.addEventListener("keypress", e => {
+                const regax = /^[a-zA-Z]{2,20}[ ]{1}[a-zA-Z]{1,20}$/
+                if (regax.exec(fatherName.value)) {
+                    document.querySelector(".fth-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".fth-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+            emailAddress.addEventListener("blur", e => {
+                const regax = /^[a-zA-Z0-9]{2,30}[ ]{0}@[a-z]{1,8}[.]{1}[a-z]{2,8}/
+                if (regax.exec(emailAddress.value)) {
+                    document.querySelector(".eml-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".eml-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+            userPhone.addEventListener("keypress", e => {
+                const regax = /^[^a-zA-Z][^ ][0-9]{2,15}[^ ]{0}[^a-zA-Z]{0}/
+                if (regax.exec(userPhone.value)) {
+                    document.querySelector(".phn-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".phn-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+            userNic.addEventListener("keypress", e => {
+                const regax = /^[0-9 -]{16}/
+                if (regax.exec(userNic.value)) {
+                    document.querySelector(".nic-div").setAttribute("style", "border-bottom:2px solid darkgreen")
+                }
+                else {
+                    document.querySelector(".nic-div").setAttribute("style", "border-bottom:2px solid red")
+                }
+            })
+        }
+        formValidition();
+
+        //*****************  show or hide the password   ************************
+        const showhidePass = () => {
+            const show = document.querySelectorAll(".show")
+            const hide = document.querySelectorAll(".hide")
+            const inputs = document.querySelectorAll(".passInp")
+            show.forEach((element, index) => {
+                show[index].addEventListener("click", e => {
+                    console.log(e.target)
+                    if (inputs[index].type === "password") {
+                        inputs[index].type = "text";
+                        show[index].setAttribute("style", "display:none")
+                        hide[index].setAttribute("style", "display:block")
+                    }
+                })
+                hide[index].addEventListener("click", e => {
+                    if (inputs[index].type === "text") {
+                        inputs[index].type = "password";
+                        show[index].setAttribute("style", "display:block")
+                        hide[index].setAttribute("style", "display:none")
+                    }
+                })
+            })
+        }
+        showhidePass();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<div class="container w-ful">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Comments Of Users </h1>
+    </div>
+    <div class="col-md-12">
+      {{#each details}}
+      <div class="comment-container">
+        <div class="comment-content">
+          <div class="user-comment m-auto py-3">
+            <div class="user-about">
+              <div class="username">
+                <a href="#">{{Name}}</a>
+              </div>
+              <div class="useremail">
+                <a href="#">{{Email}}</a>
+              </div>
+            </div>
+            <span>
+              <p>COMMENT:&nbsp;
+                <br />
+              <p>{{Message}}</p>
+            </span>
+          </div>
+        </div>
+        <div class="comment-resect">
+          <div class="like-dislike">
+            <div class="like resect">
+              <span class="love">
+                <i class="fa fa-heart "></i>
+              </span>
+              <small id="loveHaha"></small>
+            </div>
+            <div class="dislike resect">
+              <span class="haha">
+                <i class="fa fa-grin-tongue "></i>
+              </span>
+              <small id="smallHaha"></small>
+            </div>
+          </div>
+          <div class="time">
+            <p>this is time</p>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>
+</div>

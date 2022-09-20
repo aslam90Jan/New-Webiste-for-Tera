@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comments Page ||- tera.com</title>
+  <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="scss/css/fontawesome/all.css" />
+  <link rel="stylesheet" href="scss/css/style.css" />
+</head>
+
+<body>
+  <!-- *************************************** start wesbite ***************************************** -->
+  <!-- 1)  ********************** 1)    start header section  ***************************** -->
+  {{>header}}
+  <!-- **********************     end header section  ***************************** -->
+    {{>comment}}
+  <!-- ************************************  7 ) start  footer section *************************************** -->
+  {{>footer}}
+  <!-- ************************************end  footer section *************************************** -->
+  <!-- **********************************   end of Work  ********************************************* -->
+  <script src="scss/js/bootstrap/bootstrap.js"></script>
+  <script src="scss/js/bootstrap/bootstrap.min.js"></script>
+  <script src="scss/js/typed/typedjs.js"></script>
+  <script src="scss/js/fontawsome/all.js"></script>
+  <script src="scss/js/script.js"></script>
+  <script>
+    
+    const love = document.querySelectorAll(".love")
+    const haha = document.querySelectorAll(".haha")
+    
+    love.forEach((element,index)=>{
+        let encLove =0;
+      love[index].addEventListener("click",function(e){
+        e.target.style.color = "black"
+        localStorage.setItem("love", encLove)
+        document.getElementById("loveHaha").innerText = encLove+1 + "+";
+        console.log(encLove+1)
+        encLove++;
+      })
+    })
+
+    haha.forEach((element,index)=>{
+      let encHaha =0;
+      haha[index].addEventListener("click",function(e){
+        e.target.style.color = "black"
+        localStorage.setItem("haha", encHaha)
+        document.getElementById("smallHaha").innerText = encHaha+1 + "+";
+        console.log(encHaha+1)
+        encHaha++; 
+      })
+    })
+    const fromLocal = function(){
+      const dataLove = localStorage.getItem("love");
+      const dataHaha = localStorage.getItem("haha")
+      document.getElementById("loveHaha").innerText = dataLove + "+";
+      document.getElementById("smallHaha").innerText = dataHaha + "+";
+    }
+    fromLocal();
+  </script>
+</body>
+</html>

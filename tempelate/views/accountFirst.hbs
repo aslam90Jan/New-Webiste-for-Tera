@@ -1,0 +1,145 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login ||- tera.com</title>
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="scss/css/style.css" />
+</head>
+
+<body>
+    <!-- *************************************** start wesbite ***************************************** -->
+    <!-- *************************************** start header ***************************************** -->
+    {{>header}}
+    <!-- *************************************** end header ***************************************** -->
+    <div class="login_section ful-flex">
+        <div class="container">
+            <div class="row" style="flex-direction: column;">
+                <h2 class="forError">{{ErrorMessage}}</h2>
+                <div class=" m-auto form-container ">
+                    <h2>LOGIN </h2>
+                    <form action="/login" method="post">
+                        <div class="Email inputDiv">
+                            <span class="DivSpan pointer" id="forEmailSpan">..</span>
+                            <div class="Email-box  input-box ful-flex" id="Email-Box">
+                                <span id="emailIcn"><i class="fa fa-user"></i></span>
+                                <input type="text" name="Email" id="email-login" placeholder="Valid Email" required >
+                            </div>
+                        </div>
+                        <div class="Password inputDiv">
+                            <span class="DivSpan pointer" id="forPassSpan">..</span>
+                            <div class="password-box input-box ful-flex" id="Pass-Box">
+                                <span id="PassIcn"><i class="fa fa-key"></i></span>
+                                <input type="password" name="Password" id="password-login" required placeholder="Password">
+                                <span id="visible" class=" pointer"><i class="fa fa-eye"></i></span>
+                                <span id="hidden" class="hiden pointer"><i class="fa fa-close"></i></span>
+                            </div>
+                        </div>
+                        <div class="button inputDiv">
+                            <input type="submit" value="Login now" class="btn btn-success float-md-left">
+                            <a href="/resetPassword" class="btn btn-secondry float-md-right">Fargot Password</a>
+                        </div>
+                    </form>
+                </div>
+                <a href="/Signup" class="m-auto already" style="margin-top: 2rem;">Not have an account Sign up</a>
+            </div>
+        </div>
+    </div>
+    <!-- ************************************  7 ) start  footer section *************************************** -->
+    {{>footer}}
+    <!-- ************************************end  footer section *************************************** -->
+    <!-- **********************************   end of Work  ********************************************* -->
+    <script src="scss/js/bootstrap/bootstrap.js"></script>
+    <script src="scss/js/bootstrap/bootstrap.min.js"></script>
+    <script src="scss/js/typed/typedjs.js"></script>
+    <script src="scss/js/fontawsome/all.js"></script>
+    <script src="scss/js/script.js"></script>
+    <script>
+        "use strict"
+        const showHidePassword = () => {
+            let hidden = document.getElementById("hidden")
+            let visible = document.getElementById("visible")
+            let password = document.getElementById("password-login");
+            visible.addEventListener("click", (e) => {
+                if (password.type === "password") {
+                    password.type = "text";
+                    visible.style.display = "none"
+                    hidden.style.display = "block "
+                }
+            })
+            hidden.addEventListener("click", () => {
+                if (password.type === "text") {
+                    password.type = "password";
+                    visible.style.display = "block"
+                    hidden.style.display = "none"
+                }
+            })
+        }
+        showHidePassword();
+
+        // add eventlistener on input to hide the placeholder 
+        const inputClick = () => {
+            let emailSapn = document.getElementById("forEmailSpan")
+            let passSapn = document.getElementById("forPassSpan")
+            let password = document.getElementById("password-login");
+            let email = document.getElementById("email-login");
+
+            email.addEventListener("click", (e) => {
+                emailSapn.innerText = "Valid email";
+                email.placeholder = "";
+            })
+            password.addEventListener("click", (e) => {
+                passSapn.innerText = "Password ..";
+                password.placeholder = "";
+            })
+        }
+        inputClick();
+
+
+        // this form validition fornction 
+        const validitionLogin = () => {
+            const password = document.getElementById("password-login");
+            const email = document.getElementById("email-login");
+            const EmailBox = document.getElementById("Email-Box");
+            const PassBox = document.getElementById("Pass-Box")
+            const EmailIcon = document.getElementById("emailIcn")
+            const PassIcon = document.getElementById("PassIcn")
+            let emailSapn = document.getElementById("forEmailSpan")
+            let passSapn = document.getElementById("forPassSpan")
+
+            email.addEventListener("keypress", e => {
+                console.log(e.target)
+                const emailReg = /^[a-zA-Z0-9]{2,30}[@]{1}[a-z]{2,9}[.]{1}[a-z]{2,8}/;
+                if (emailReg.exec(email.value)) {
+                    EmailBox.style.borderBottom = "2px solid green";
+                    EmailIcon.style.color = "green";
+                    emailSapn.style.color = "green";
+                } else {
+                    document.getElementById("Email-Box").style.borderBottom = "2px solid red"
+                    EmailIcon.style.color = "red";
+                    emailSapn.style.color = "red";
+                }
+            })
+            password.addEventListener("keypress", e => {
+                console.log(e.target)
+                const PassReg = /^[a-zA-Z0-9]{1,20}[^ ][a-zA-Z0-9]{1,20}/;
+                if (PassReg.exec(password.value)) {
+                    PassBox.style.borderBottom = "2px solid green";
+                    PassIcon.style.color = "green";
+                    passSapn.style.color = "green";
+                } else {
+                    PassBox.style.borderBottom = "2px solid red"
+                    PassIcon.style.color = "red";
+                    passSapn.style.color = "red";
+                }
+            })
+        }
+        validitionLogin();
+    </script>
+</body>
+
+</html>

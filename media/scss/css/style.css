@@ -1,0 +1,1299 @@
+/* universal selector  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.9s;
+}
+
+/* html  */
+html {
+  scroll-behavior: smooth;
+  --webkit--scroll-behavior: smooth;
+  font-size: 94%;
+}
+
+/* body  */
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* ******************************************************** some Extra styling and classes ****************************************** */
+*::selection {
+  background: rgba(206, 19, 206, 0.651);
+}
+
+.ful-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex_fl {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+
+.section {
+  margin-top: 2rem;
+  box-shadow: 12px 0px 12px black, 8px 12px 4px gray, 12px 12px 3px darkgreen,
+    15px 1px 25px green;
+}
+
+.mt-1rem {
+  margin-top: 1rem;
+}
+
+/* ***************************************************  navbar started   ************************************************** */
+/* header  */
+.header,
+footer {
+  width: 100%;
+  background: rgba(65, 196, 65, 0.924);
+  padding-top: 8px;
+  box-shadow: 0px 0px 4px rgb(38, 61, 27);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+/* in header logo div styling  */
+.logo {
+  font-weight: bolder;
+  color: white;
+}
+
+.logo a {
+  color: white;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+.logo span {
+  letter-spacing: -3px;
+}
+
+.logo span:first-child {
+  color: greenyellow;
+}
+
+/* in header inner search division  */
+.search {
+  background: white;
+  border: 1px solid darkgreen;
+  border-radius: 30px;
+  padding: 3px;
+  margin-top: 2rem;
+  box-shadow: 0px 0px 4px gray, 1px 2px 3px darkgray, 2px 1px 2px darkslategray,
+    1px 1px 1px darkgreen;
+}
+
+.search form {
+  width: 100%;
+}
+
+.search input {
+  width: 88%;
+  padding: 5px 7px;
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  color: darkgreen;
+  font-weight: 400;
+}
+
+.search span {
+  font-size: 1.3rem;
+  color: darkgreen;
+  cursor: pointer;
+}
+
+.search_sugessions {
+  width: 100%;
+  margin-top: 2rem;
+  height: 100vh;
+  overflow: auto;
+}
+
+.sugg-container {
+  flex-wrap: wrap;
+  padding: 5px 10px;
+}
+
+.search_sugessions .sugg {
+  border: 1px solid red;
+  margin: 5px auto;
+  padding: 10px;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search_sugessions .sugg a {
+  width: 100%;
+}
+
+/* in header inner navbar division  */
+.header ul {
+  display: flex;
+}
+
+.header ul li {
+  padding: 10px 14px;
+  list-style-type: none;
+  margin: 3px 7px;
+}
+
+.header ul li:hover,
+.header ul li a:active {
+  background: rgba(0, 100, 0, 0.692);
+  border-radius: 3px;
+}
+
+.header ul li:hover ~ .header ul li a {
+  color: rgb(143, 233, 155);
+}
+
+.header ul li a {
+  color: white;
+  font-weight: 600;
+}
+
+.header ul li a:hover {
+  color: rgb(143, 233, 155);
+  text-decoration: none;
+}
+
+/**************************************** navbar compelete ********************************************** */
+/* ************************************ 2)   start starter sections  ********************************************** */
+.starter {
+  width: 100%;
+  background-blend-mode: darken;
+  padding: 50px;
+  animation: picAnimate 20s cubic-bezier(0.92, 0.01, 0.1, 1.01) infinite;
+  animation-fill-mode: backwards;
+  background-size: cover;
+  background-color: rgba(23, 44, 15, 0.664);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.starter .content {
+  padding: 10px;
+  height: auto;
+  flex-direction: column;
+}
+
+.starter .content h1,
+.starter .content h2 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 1px 2px 2px yellow, 1px 1px 1px white, 2px 1px 1px gray;
+  margin: 2rem auto;
+}
+
+.starter .content h4 {
+  font-size: 2rem;
+  color: darkmagenta;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-shadow: 2px 0px 1px orangered, 1px 1px 2px gray, 0px 2px 0px yellow;
+}
+
+.starter .content h2 {
+  font-size: 2.5rem;
+  margin: 5px auto;
+}
+
+.starter .content p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 2rem;
+  width: 80%;
+  color: rgb(115, 115, 206);
+  text-shadow: 0px 0px 0.4px white, 1px 0px 0px yellow;
+  font-family: jameel Noori Nastaleeq regular;
+  word-spacing: 5px;
+}
+
+.starter .button-containt {
+  margin: 1rem;
+}
+
+.starter .button-containt .btn-auto {
+  margin: 0.8rem auto;
+}
+
+.starter .button-containt .btn-auto a {
+  width: 100%;
+  padding: 8px;
+  font-weight: bold;
+}
+
+@keyframes picAnimate {
+  0%,
+  100% {
+    background-image: url(../../graphics/pictures/bg.jpg);
+  }
+
+  20% {
+    background-image: url(../../graphics/pictures/bg5.jpg);
+  }
+
+  45% {
+    background-image: url(../../graphics/pictures/bg3.jpg);
+  }
+
+  65% {
+    background-image: url(../../graphics/pictures/bg4.jpg);
+  }
+  95% {
+    background-image: url(../../graphics/pictures/bg2.jpg);
+  }
+}
+
+/* ************************************    starter compelete  ********************************************** */
+/* *******************************************  3)      start services divisiton stylign  ****************************** */
+.services {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.services h2,
+.places h2 {
+  margin: 2rem;
+  font-weight: 200;
+  font-size: 2.3rem;
+}
+
+.services span,
+.branches h2 span {
+  color: rgb(38, 218, 38);
+  font-weight: bold;
+}
+
+.services_item {
+  margin: 1rem auto;
+  padding: 10px;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.services_item h3 {
+  text-align: center;
+}
+
+.service_first {
+  /* background: linear-gradient(
+    34deg,
+    rgba(127, 230, 127, 0.507),
+    rgba(47, 85, 12, 0.568)
+  );
+  border: 5px solid transparent;
+  border-image: linear-gradient(22deg, green, yellow, orangered);
+  border-image-slice: 2; */
+}
+
+.service_first:hover {
+  background: linear-gradient(
+    39deg,
+    rgba(47, 85, 12, 0.568),
+    rgba(127, 230, 127, 0.507)
+  );
+  border: 5px solid transparent;
+  border-image: linear-gradient(22deg, orangered, green, yellow);
+  border-image-slice: 2;
+}
+
+.service_sec {
+  /* box-shadow: 0px 0px 6px rgb(94, 79, 79);
+  background: rgb(243, 240, 240); */
+}
+
+.service_sec:hover {
+  background: white;
+  box-shadow: 0px 0px 6px rgb(10, 250, 70);
+}
+
+.services_item a,
+.branchItem h3 {
+  margin: 1rem;
+  color: green;
+}
+
+.services_item a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.services_item p {
+  text-align: center;
+  margin: 5px;
+  font-size: 1.1rem;
+}
+
+.services hr {
+  height: 5px;
+}
+
+i.fa.fa-camera {
+  font-size: 4rem;
+}
+
+/* ************************************    Services compelete  ********************************************** */
+/* *******************************************  3)      start Brances divisiton styling  ****************************** */
+.branches {
+  padding: 30px 10px;
+  margin-top: 4rem;
+  background: rgba(9, 58, 9, 0.692) url(../../graphics/pictures/bg_branch.jpg)
+    center center/cover fixed;
+  background-blend-mode: darken;
+}
+
+.branches h2 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2.3rem;
+  text-shadow: 1px 1px 3px white, 0px 3px 1px white;
+}
+
+.branchItem {
+  background: rgba(255, 255, 255, 0.87);
+  box-shadow: 2px 2px 7px darkgreen;
+  padding: 10px;
+  text-align: center;
+  margin-top: 2rem !important;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.branchItem .pic-branches {
+  width: 100%;
+  height: auto;
+  border: 3px solid darkgreen;
+  border-radius: 10px;
+  margin: 0px 5px;
+  margin-bottom: 2rem;
+  margin-top: 3px;
+}
+
+.branchItem .pic-branches img {
+  width: 100%;
+  height: 100%;
+}
+
+.branchItem a {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.branchItem h4 {
+  font-size: 1.2rem;
+  margin: 4px auto;
+  color: rgb(38, 218, 38);
+  font-weight: bold;
+}
+
+.branchItem p {
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+/* *******************************************  3)      end Brances divisiton styling  ****************************** */
+/* *******************************************  3)      start Places divisiton styling  ****************************** */
+.places {
+  padding: 30px 10px;
+  margin-top: 4rem;
+}
+
+.pace_Item {
+  height: 300px;
+  width: 300px;
+  margin: 10px !important;
+  position: relative;
+  outline: 8px solid darkgreen;
+}
+
+.pace_Item .pic {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.content_place {
+  width: 99%;
+  height: 99%;
+  margin: auto;
+  /* background: white; */
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  bottom: 0%;
+  background: rgba(0, 128, 0, 0.692);
+  transform: translateY(-120px);
+  z-index: -1;
+  opacity: 0;
+}
+
+.btn_places {
+  width: 98%;
+  margin: 1rem auto;
+}
+
+.pace_Item h3 {
+  color: yellow;
+  margin: 5px;
+}
+
+.pace_Item h4 {
+  font-size: 1.1rem;
+  color: greenyellow;
+  margin: 5px 3px;
+}
+
+.pace_Item p {
+  text-align: center;
+  color: wheat;
+}
+
+.pace_Item h5 {
+  margin-top: 3px;
+  color: white;
+}
+
+.btn_places {
+  margin-top: 1rem;
+}
+
+.btn_places .doc {
+  width: 80%;
+}
+
+.btn_places .download {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 20%;
+}
+
+/* *******************************************  3)      end Places divisiton styling  ****************************** */
+/* *******************************************  3)      start  Comment Section  divisiton styling  ****************************** */
+.commentSection {
+  background: linear-gradient(12deg, white, green);
+  margin-top: 3rem;
+  padding: 30px;
+}
+
+.commentSection h3 {
+  color: white;
+  font-weight: 300;
+}
+
+.form {
+  margin-top: 2rem;
+}
+
+.form form {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.form .input {
+  width: 100%;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  margin: 1rem;
+}
+
+.form .input input,
+.form .input textarea {
+  width: 94%;
+  outline: none;
+  padding: 10px;
+  border: none;
+  /* border-radius: 6px; */
+  background: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.form .input textarea {
+  padding: 10px 25px;
+}
+
+.form .input input::placeholder,
+.form .input textarea::placeholder {
+  color: white;
+  font-weight: 200;
+}
+
+.form button {
+  margin: 10px auto;
+  width: 30%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap-reverse !important;
+}
+
+.commentSection .map {
+  margin-top: 2.5rem;
+}
+
+.commentSection .map iframe {
+  width: 99%;
+  height: 400px;
+  margin: 10px auto;
+}
+
+.author_sec h3 {
+  text-align: center;
+}
+
+.author {
+  border: 1px solid pink;
+  margin: auto;
+  margin-top: 2rem;
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.author .authorPic {
+  width: 100%;
+  height: 85%;
+  border-radius: 5px;
+}
+
+.author .authorPic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+.author .authorPic img:hover {
+  filter: grayscale(1.5);
+}
+
+.author .authorContent {
+  width: 100%;
+  height: 14%;
+  background: green;
+  border-radius: 5px;
+}
+
+.author .authorContent a {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* *******************************************  3)      end Comment divisiton styling  ****************************** */
+/* *******************************************  4)      start footer divisiton styling  ****************************** */
+
+footer p {
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+footer p span {
+  color: orangered;
+}
+
+footer p a {
+  color: orangered;
+  text-decoration: none;
+}
+
+/* *******************************************  4)      end footer divisiton styling  ****************************** */
+
+/* *************************************  end main styling  ******************************** */
+
+/* *************************************  end HOme page  styling  ******************************** */
+
+/* *************************************  start comment page  styling  ******************************** */
+.comment-container {
+  width: 100%;
+  /* border: 1px solid red; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  border-bottom: 3px solid rgba(65, 196, 65, 0.924);
+  padding-bottom: 7px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 8px grey;
+}
+
+.comment-container .comment-content {
+  width: 97%;
+  /* border: 1px solid red; */
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-container .comment-resect {
+  width: 100%;
+  /* padding: 10px; */
+  /* border: 1px solid red; */
+  margin: auto;
+  /* margin-top: 5px; */
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.719);
+}
+
+.comment-container .comment-content .user-comment {
+  width: 100%;
+  padding: 5px;
+  /* border: 1px solid red; */
+}
+
+.user-about {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px dotted violet;
+  padding: 7px;
+}
+
+.user-about a {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.comment-container .comment-content .user-comment span {
+  font-size: 1.3rem;
+  font-weight: 300;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.comment-container .comment-content .user-comment span::first-line {
+  font-weight: bolder;
+  color: purple;
+}
+
+#msg-head {
+  font-weight: bolder;
+  color: purple;
+}
+
+.comment-resect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* padding: 10px; */
+}
+
+.like-dislike {
+  /* border: 1px solid red; */
+  width: 40%;
+  padding: 4px;
+  display: flex;
+}
+
+.like-dislike span {
+  font-size: 1.9rem;
+}
+
+.time {
+  width: 50%;
+  padding: 4px;
+  margin: 3px;
+}
+
+.resect {
+  width: 45%;
+  margin: auto;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.time p {
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: darkgreen;
+  text-align: right;
+  margin-top: 5px;
+  color: white;
+  text-shadow: 1px 0px 1px yellow, 0px 0px 1px greenyellow;
+}
+
+/* ************************************* end comment page  styling  ******************************** */
+
+/* ************************************* start accounts page styling login page ******************************** */
+.login_section {
+  /* margin: 3rem auto; */
+  height: 100vh;
+  width: 100%;
+}
+
+.login_section .row {
+}
+
+.login_section .form-container {
+  /* border: 2px solid red; */
+  padding: 10px;
+  width: 450px;
+  box-shadow: 0px 0px 12px darkgray;
+  border-radius: 10px;
+  border: none;
+}
+
+.hiden {
+  display: none;
+}
+
+.form-container h2,
+.signup-Container h2 {
+  padding: 9px 15px;
+  background: green;
+  color: white;
+  border-radius: 8px;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.form-container .inputDiv {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0px;
+}
+
+.form-container .inputDiv .DivSpan {
+  font-size: 1rem;
+  color: purple;
+  margin: 1rem 2rem;
+}
+
+.form-container .input-box {
+  width: 100%;
+  /* border: 1px solid gray; */
+  padding: 2px 5px;
+  border-bottom: 3px solid darkgreen;
+  /* border-radius: 10px; */
+}
+
+.form-container .input-box span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.form-container .input-box input {
+  width: 94%;
+  padding: 6px;
+  margin: 0px 3px;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+}
+
+.form-container .inputDiv input[type="submit"] {
+  font-size: 1.2rem;
+  margin: 3px 10px;
+}
+
+.already {
+  text-align: center;
+  margin-top: 2rem !important;
+  padding: 5px 20px !important;
+}
+.pointer {
+  cursor: pointer;
+}
+/* ************************************* end accountsFRIST page styling login page ******************************** */
+/* ************************************* START accountsSECD page styling login page ******************************** */
+.signup-Container {
+  margin-top: 2rem;
+  /* border: 1px solid red; */
+  padding: 10px;
+  width: 95%;
+}
+.signup-Container label {
+  margin-top: 5px;
+}
+.signup-Container form {
+  width: 100%;
+  height: auto;
+}
+.input-lg {
+  border-right: 2px solid gray;
+  margin-top: 2rem !important;
+}
+.input-end {
+  margin-top: 1.1rem;
+}
+.signup-Container form .input-lg {
+  width: 100%;
+  /* border: 1px solid red; */
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 2px solid gray;
+}
+.signup-Container form .input-lg .input-inner {
+  width: 300px;
+  /* border: 1px solid red; */
+}
+.signup-Container form .input-lg .input-inner > span {
+  margin: 5px 35px;
+}
+.signup-Container form .input-lg .input-inner .input-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid gray; */
+  margin: 5px;
+  border-bottom: 1px solid gray;
+}
+.signup-Container form .input-lg .input-inner input {
+  width: 90%;
+  padding: 6px 10px;
+  font-size: 1.1rem;
+  color: purple;
+  border: none;
+  outline: none;
+}
+.radiosOptinos .input-inner {
+  display: block;
+}
+.radiosOptinos .input-inner .input-end .mlfml {
+  display: flex;
+  width: 50%;
+  /* border: 1px soid red; */
+  align-items: center;
+  justify-content: center;
+}
+.radiosOptinos .input-inner .input-end .mlfml input {
+  width: auto;
+  margin: 11px;
+  outline: none;
+}
+.uplodition-files .ImagePreview {
+  width: 200px;
+  height: 200px;
+  border: 1px solid greenyellow;
+  margin: auto;
+  border-radius: 8px;
+}
+.ImagePreview img {
+  width: 100%;
+  height: 100%;
+}
+.uplodition-files .input-inner .uploadSpan {
+  text-align: center;
+  margin: 5px 5px;
+}
+
+.selection select {
+  width: 97%;
+  padding: 4px;
+  display: block;
+  margin: auto;
+  font-size: 1.1rem;
+}
+.selection select option {
+  padding: 5px;
+  font-size: 1.1rem;
+}
+.addresses .input-lg {
+  flex-direction: column;
+}
+.addresses_local .input-end {
+  width: 100%;
+  margin: 8px;
+  font-size: 1.2rem;
+}
+.addresses_local span {
+  margin: 5px 20px;
+}
+.addresses_local textarea {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.submitFormBtn {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.submitFormBtn input[type="submit"],
+.submitFormBtn input[type="reset"] {
+  width: 30%;
+}
+.a {
+  margin: 3rem auto !important;
+  width: 100%;
+  text-align: center;
+}
+.br-btm-red {
+  border-bottom: 2px solid red;
+}
+.br-btm-gr {
+  border-bottom: 2px solid darkgreen;
+}
+
+/* ************************************* end accountsSECD page styling login page ******************************** */
+/* ************************************* start dashboard page styling login page ******************************** */
+.dashboard-container{
+  background: green;
+}
+.user-Dashboard {
+  padding: 10px;
+  border: 1px solid red;
+  width: 100%;
+  margin: 2rem 5px;
+}
+
+.user-Dashboard .first-row {
+  border-radius: 10px;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  width: 100%;
+  /* border: 1px solid orangered; */
+  height: auto;
+  background: greenyellow;
+}
+
+.user-Dashboard .first-row .sidebar {
+  width: 37%;
+  /* border: 1px solid darkgreen; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 2px 3px 12px grey;
+  border-radius: 10px;
+}
+
+.user-Dashboard .first-row .sidebar .user-pic {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  margin: 1rem 0px;
+}
+
+.user-Dashboard .first-row .sidebar .user-pic img {
+  width: 100%;
+  height: 100%;
+  border: 3px solid green;
+  border-radius: 50%;
+}
+.user-Dashboard .first-row .user-data {
+  width: 100%;
+  /* border: 1px solid orangered; */
+  border-radius: 5px;
+}
+.user-Dashboard .first-row .user-data .userData_items {
+  padding: 8px;
+  border-bottom: 1px solid gray;
+  width: 95%;
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0px 0px 7px gray;
+}
+.user-Dashboard .first-row .user-data .userData_items .user_text {
+  width: 78%;
+  /* border: 1px solid red; */
+  padding: 5px;
+}
+.user-Dashboard .first-row .user-data .userData_items .user_text h3 {
+  font-size: 1.5rem;
+}
+.user-Dashboard .first-row .user-data .userData_items .user_edit {
+  width: 20%;
+  /* border: 1px solid red; */
+  box-shadow: 0px 0px 5px gray;
+  padding: 5px;
+  text-align: right;
+}
+.user-Dashboard .first-row .user-data .userData_items .user_edit h3 {
+  cursor: pointer;
+}
+.user-Dashboard .first-row .user-data .userData_items .user_edit h3:hover {
+  color: white;
+}
+.user-Dashboard
+  .first-row
+  .user-data
+  .userData_items
+  .user_edit
+  h3:hover
+  ~ .user-Dashboard
+  .first-row
+  .user-data
+  .userData_items
+  .user_edit {
+  background: darkgreen;
+  border-top-right-radius: 5px;
+}
+
+.user-Dashboard .first-row .content-user {
+  width: 55%;
+  border: 1px solid greenyellow;
+  /* margin: 5px auto; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  box-shadow: 2px 3px 12px grey;
+  border-radius: 10px;
+}
+.this-row .user_text{
+  text-align: left;
+  /* border: 1px solid red; */
+  padding: 5px;
+}
+.this-row .user_text h3{
+  text-align: left;
+}
+.user-Dashboard .first-row .content-user .this-row{
+  width: 95%;
+  margin: 1rem auto;
+  /* border: 1px solid red; */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 7px gray;
+}
+
+/* ************************************* end dashboard page styling login page ******************************** */
+
+@media screen and (max-width: 1200px) {
+  .author {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 88%;
+  }
+
+  .author {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    /* font-size: 83%; */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    /* font-size: 80%; */
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .pace_Item {
+    width: 250px;
+  }
+
+  .author_sec {
+    margin: 2rem;
+    width: 100% !important;
+    padding: 0px;
+  }
+
+  .author_sec h3 {
+    text-align: center;
+  }
+
+  .author_sec .author {
+    margin: 1rem;
+  }
+
+  .w-ful {
+    width: 97%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    /* font-size: 78%; */
+  }
+
+  /* .map{
+      width: 100%;
+    } */
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 75%;
+    overflow-x: hidden;
+  }
+
+  .header .logo {
+    /* font-size: 100% !important; */
+  }
+
+  .servMedia {
+    padding: 15px;
+  }
+
+  .service_sec {
+    margin: 1rem 20px;
+  }
+
+  .comment-container .comment-content .user-comment-details .pic-comment-user {
+    width: 80px;
+    height: 80px;
+  }
+
+  .comment-container small {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  html {
+    font-size: 68%;
+  }
+
+  .pace_Item {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 8px !important;
+  }
+
+  .starter {
+    padding: 20px;
+  }
+
+  .starter .content p {
+    width: 100%;
+  }
+
+  .header ul li {
+    padding: 10px 8px;
+    list-style-type: none;
+    margin: 3px 4px;
+  }
+
+  .login_section {
+    display: block;
+    margin-top: 2rem;
+  }
+
+  .login_section .form-container {
+    width: 400px;
+  }
+
+  .form-container .inputDiv {
+    margin-top: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .author {
+    width: 120px;
+  }
+
+  .login_section .form-container {
+    width: 350px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 446px) {
+  .pace_Item {
+    width: 98%;
+    margin: auto;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .author {
+    width: 100px;
+  }
+
+  .login_section .form-container {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 70%;
+  }
+
+  .header ul li {
+    padding: 5px 3px;
+    /* margin: 3px 2px; */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .form-container {
+    width: 200px;
+  }
+}
+
+.forError {
+  width: 50%;
+  display: block;
+  margin: 12px auto;
+  margin-bottom: 2rem;
+  /* padding: 10px; */
+  background: yellow;
+  color: red;
+  text-align: center;
+}

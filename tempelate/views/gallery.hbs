@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery ||- tera.com</title>
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="scss/css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="scss/css/style.css" />
+</head>
+<!-- *************************************** start wesbite ***************************************** -->
+<!-- *************************************** start header ***************************************** -->
+{{>header}}
+<!-- *************************************** end wesbite ***************************************** -->
+
+<div class="places" id="gallery" <div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">Allowed and legal places pictures with <span>details</span></h2>
+    </div>
+    <div class="divs ful-flex" style="flex-wrap: wrap">
+        <div class="pace_Item m-auto forJs">
+            <div class="pic">
+                <img src="graphics/pictures/bg.jpg" alt="" />
+            </div>
+            <div class="content_place ful-flex">
+                <h3>Place Name</h3>
+                <h4>West South West</h4>
+                <h5>From Peshawar 50 km</h5>
+                <h5>to maidan 50 km</h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio?
+                </p>
+                <div class="btn_places ful-flex">
+                    <a href=" #" class="btn btn-danger doc">Full Documentry</a>
+                    <a href="#" class="btn btn-primary download" title="click to download this picture"><i
+                            class="fa fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- *************************************** end gallery ***************************************** -->
+<!-- *************************************** start footer ***************************************** -->
+{{>footer}}
+<!-- *************************************** end footer ***************************************** -->
+
+<!-- **********************************   end of Work  ********************************************* -->
+
+<body>
+    <script src="scss/js/bootstrap/bootstrap.js"></script>
+    <script src="scss/js/bootstrap/bootstrap.min.js"></script>
+    <script src="scss/js/typed/typedjs.js"></script>
+    <script src="scss/js/fontawsome/all.js"></script>
+    <script src="scss/js/script.js"></script>
+    <script>
+        var placeBox = document.querySelectorAll(".forJs"); var contentBox =
+            document.querySelectorAll(".content_place"); placeBox.forEach((element,
+                index) => {
+                placeBox[index].addEventListener("mouseenter", (e) => {
+                    console.log(e.target); console.log(contentBox[index]);
+                    contentBox[index].style.transform = "translateY(0)";
+                    contentBox[index].style.zIndex = "1"; contentBox[index].style.opacity =
+                        "1";
+                }); placeBox[index].addEventListener("mouseleave", (e) => {
+                    console.log(e.target); console.log(contentBox[index]);
+                    contentBox[index].style.transform = "translateY(-120)";
+                    contentBox[index].style.zIndex = "-1"; contentBox[index].style.opacity =
+                        "0";
+                });
+            });
+    </script>
+</body>
+
+</html>
